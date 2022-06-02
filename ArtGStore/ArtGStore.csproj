@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{296925FA-1FFD-4F7A-B729-147741662AA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ArtGStore</RootNamespace>
+    <AssemblyName>ArtGStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssinaturasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssinaturasForm.Designer.cs">
+      <DependentUpon>AssinaturasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriasForm.Designer.cs">
+      <DependentUpon>CategoriasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexao.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="ListarAssinaturasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAssinaturasForm.Designer.cs">
+      <DependentUpon>ListarAssinaturasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCategoriasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarCategoriasForm.Designer.cs">
+      <DependentUpon>ListarCategoriasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarJogosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarJogosForm.Designer.cs">
+      <DependentUpon>ListarJogosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarUsuariosForm.Designer.cs">
+      <DependentUpon>ListarUsuariosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapeamento\Produto.cs" />
+    <Compile Include="Mapeamento\Usuario.cs" />
+    <Compile Include="Negocios\AssinaturaDAO.cs" />
+    <Compile Include="Negocios\CategoriaDAO.cs" />
+    <Compile Include="Negocios\ProdutoDAO.cs" />
+    <Compile Include="Negocios\UsuarioDAO.cs" />
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosForm.Designer.cs">
+      <DependentUpon>ProdutosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sessao.cs" />
+    <Compile Include="SobreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SobreForm.Designer.cs">
+      <DependentUpon>SobreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AssinaturasForm.resx">
+      <DependentUpon>AssinaturasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriasForm.resx">
+      <DependentUpon>CategoriasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAssinaturasForm.resx">
+      <DependentUpon>ListarAssinaturasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarCategoriasForm.resx">
+      <DependentUpon>ListarCategoriasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarJogosForm.resx">
+      <DependentUpon>ListarJogosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarUsuariosForm.resx">
+      <DependentUpon>ListarUsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosForm.resx">
+      <DependentUpon>ProdutosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SobreForm.resx">
+      <DependentUpon>SobreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscription.png" />
+    <None Include="Resources\subscription.ico" />
+    <Content Include="ScriptBanco.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
